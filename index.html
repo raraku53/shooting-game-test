@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>縦画面シューティング</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section id="hud" class="hud">
+        <div>Score: <span id="score">0</span></div>
+        <div>HP: <span id="hp">0/0</span></div>
+        <div>Shield: <span id="shield">0</span></div>
+        <div>無敵: <span id="invincible-time">0.0</span>s</div>
+        <div>攻撃UP: <span id="attack-up-time">0.0</span>s</div>
+        <div>連射UP: <span id="attack-speed-time">0.0</span>s</div>
+        <div>移動UP: <span id="move-speed-time">0.0</span>s</div>
+      </section>
+
+      <section class="game-shell" aria-label="game area">
+        <canvas id="game-canvas" width="360" height="640"></canvas>
+        <div id="orientation-overlay" class="overlay hidden" role="alert" aria-live="assertive">
+          縦画面にしてください
+        </div>
+        <div id="gameover-overlay" class="overlay hidden">
+          <p>ゲームオーバー</p>
+          <p>Score: <span id="final-score">0</span></p>
+          <button id="restart-button" type="button">リスタート</button>
+        </div>
+      </section>
+
+      <section class="controls" aria-label="controls">
+        <button id="left-button" class="control-button" type="button">左</button>
+        <button id="right-button" class="control-button" type="button">右</button>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
