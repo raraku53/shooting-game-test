@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Simple Shooting Game</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hud">
+      <h1>シューティングゲーム</h1>
+      <p id="score">Score: 0</p>
+    </header>
+
+    <section class="game-wrapper">
+      <canvas id="gameCanvas" width="360" height="640" aria-label="ゲーム画面"></canvas>
+      <div id="overlay" class="overlay hidden" role="dialog" aria-live="polite">
+        <p id="gameOverText">Game Over</p>
+        <button id="restartButton" type="button">リスタート</button>
+      </div>
+    </section>
+
+    <section class="controls" aria-label="左右操作ボタン">
+      <button id="leftButton" type="button">左</button>
+      <button id="rightButton" type="button">右</button>
+    </section>
+  </main>
+
+  <script src="./script.js"></script>
+</body>
+</html>
